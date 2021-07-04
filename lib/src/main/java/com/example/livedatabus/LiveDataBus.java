@@ -91,6 +91,6 @@ public class LiveDataBus {
     }
 
     public static boolean isMainThread() {
-        return Looper.myLooper() == Looper.getMainLooper();
+        return Thread.currentThread() == Looper.getMainLooper().getThread();
     }
 }

@@ -12,7 +12,7 @@ import static androidx.lifecycle.Lifecycle.State.STARTED;
  * @date 2020/2/25 0025 13:34
  */
 public class UnstickyLiveData<T> extends MutableLiveData<T> {
-    protected final Map<Observer<? super T>, PreventStickyEventObserverWrapper<? super T>> myObserverWrapperMap = new HashMap<>();
+    private final Map<Observer<? super T>, PreventStickyEventObserverWrapper<? super T>> myObserverWrapperMap = new HashMap<>();
 
     public UnstickyLiveData(T value) {
         super(value);
