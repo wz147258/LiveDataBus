@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
         applicationId "com.example.livedatabus"
         minSdkVersion 16
-        targetSdkVersion 30
+        targetSdkVersion TARGET_SDK_VERSION.toInteger()
         versionCode 1
         versionName "1.0"
 
@@ -27,6 +27,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation androidx_appcompat
     implementation 'com.google.android.material:material:1.4.0'
 }
